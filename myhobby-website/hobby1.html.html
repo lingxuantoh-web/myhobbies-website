@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Painting</title>
+ <link rel="stylesheet" href="./styles.css" type="text/css" />
+  <style>
+body {
+  font-family: "Commissioner", sans-serif;
+  margin: 0;
+  background: linear-gradient(180deg, #eef2ff 0%, #dbe3ff 100%);
+  color: #1f2937;
+}
+
+h1, h2, h3 {
+  font-weight: 800;
+  letter-spacing: 0.3px;
+}
+
+p {
+  line-height: 1.6;
+  color: #4b5563;
+}
+
+/* ========== NAVBAR ========== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(10px);
+  padding: 14px 24px;
+  border-radius: 14px;
+  margin: 20px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+
+.brand {
+  font-size: 1.4rem;
+  font-weight: 900;
+  color: #4338ca;
+}
+
+.nav-links a {
+  margin-left: 14px;
+  padding: 8px 14px;
+  border-radius: 10px;
+  font-weight: 700;
+  color: #4338ca;
+  transition: background 0.25s;
+}
+
+.nav-links a:hover {
+  background: rgba(67,56,202,0.1);
+}
+
+/* ========== HERO ========== */
+.hero {
+  max-width: 900px;
+  margin: 30px auto;
+  text-align: center;
+}
+
+.hero img {
+  width: 100%;
+  max-width: 720px;
+  border-radius: 16px;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.18);
+  margin: 20px 0;
+}
+
+/* ========== SECTION TITLE ========== */
+.section-title {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-top: 40px;
+  color: #3730a3;
+}
+
+/* ========== TEXT BOXES ========== */
+.text-box {
+  background: rgba(255,255,255,0.9);
+  backdrop-filter: blur(8px);
+  border-radius: 16px;
+  box-shadow: 0 10px 32px rgba(0,0,0,0.08);
+  padding: 22px;
+}
+
+/* ========== EXPERIENCE CARDS ========== */
+.experience-cards {
+  max-width: 900px;
+  margin: 24px auto;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.exp-card {
+  width: 230px;
+  background: #ffffff;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.exp-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 24px 50px rgba(0,0,0,0.25);
+}
+
+.exp-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.exp-card p {
+  padding: 12px;
+  font-weight: 700;
+  color: #4338ca;
+}
+
+@media (max-width: 700px) {
+  .navbar {
+    margin: 12px;
+  }
+}
+.navbar {
+  max-width: 1000px;
+  margin: 20px auto;   /* ← centers horizontally */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(10px);
+  padding: 14px 24px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+
+/* ========== HOW-TO CARD ========== */
+.howto-card {
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 16px 40px rgba(0,0,0,0.12);
+  padding: 20px;
+  width: 660px;
+  display: flex;
+  gap: 18px;
+  transition: transform 0.3s;
+}
+
+.howto-card:hover {
+  transform: translateY(-6px);
+}
+
+.howto-card img {
+  width: 240px;
+  height: 260px;
+  border-radius: 14px;
+  object-fit: cover;
+}
+
+/* ========== MATERIAL CARDS ========== */
+.materials-top-card,
+.materials-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.materials-top-card:hover,
+.materials-card:hover {
+  transform: translateY(-8px) scale(1.04);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.22);
+}
+
+/* ========== TABLE ========== */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+th {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  color: white;
+  padding: 14px;
+}
+
+td {
+  background: #ffffff;
+  padding: 12px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+/* ========== MOBILE ========== */
+@media (max-width: 700px) {
+  .howto-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .howto-card img {
+    width: 100%;
+    height: 220px;
+  }
+}
+</style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="brand">My Favorite Hobby</div>
+    <div class="nav-links">
+      <a href="index.html.html">Home</a>
+      <a href="hobby1.html.html">Painting</a>
+      <a href="hobby2.html.html">Music</a>
+    </div>
+  </nav>
+
+  <div class="hero">
+    <h1>Painting 🎨</h1>
+    <p>My first hobby is oil pastel painting.Oil pastel painting uses sticks made of pigment mixed with a non-drying oil and wax binder, giving them a creamy, buttery texture similar to both wax crayons and traditional pastels.</p>
+
+    <img src="https://files.catbox.moe/5k51nr.jpg" alt="jpeg.3" >
+    <p style="max-width:700px;margin:12px auto;color:#444"> smooth, creamy texture, similar to a crayon, that allows for bold, vibrant colors and smooth blending</p>
+  </div>
+<h2 class="section-title">My Experience</h2>
+
+  <div class="text-box intro" style="max-width:720px;margin:18px auto;padding:18px;">
+    <p>
+     I have been using oil pastels since I was ten years old, during my art class at school and they have become one of my favorite things to do. I like how the colors are soft and bright, and how they can blend together so smoothly. When I draw with them, it feels relaxing, and I can show my feelings through the colors I choose. I enjoy seeing my own art work when it's completed.I like oil pastels because they let me be creative and make art in my own way.
+    </p>
+  </div>
+<div class="experience-cards">
+  <div class="exp-card">
+    <img src="https://files.catbox.moe/hua6zy.jpg" alt="mountain">
+    <p>My Artwork</p>
+  </div>
+
+  <div class="exp-card">
+    <img src="https://files.catbox.moe/46qa3f.jpg" alt="wave">
+    <p>My Artwork</p>
+  </div>
+
+  <div class="exp-card">
+    <img src="https://files.catbox.moe/mg0rgj.jpg" alt="sweets">
+    <p>My Artwork</p>
+  </div>
+</div>
+
+  <section class="howto-section" aria-labelledby="howto-heading">
+    <div class="howto-container">
+      <div class="howto-card" role="article" aria-label="How to paint quick guide">
+        <img src="https://files.catbox.moe/76f2yx.jpg" alt="sunflower" >
+ <h3>how to do oil pastels</h3>
+          <p>
+            1) Gather materials<br>
+            2)Plan Your Drawing<br>
+            3)Start With Light Colors First<br>
+            4)Begin Layering<br>
+            5) Blend the Colors<br>
+            6)Add Details<br>
+            7)Tips<br>
+            Don’t press too hard in the beginning ,build layers gradually.
+
+Use scrap paper to clean your pastel tips by rubbing them.
+
+Mix colors directly on paper for richer results.
+
+Experiment with textures by changing the pressure of your strokes.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="materials-wrap">
+    <div class="materials">
+      <table>
+        <tr>
+            <th rowspan="1">materials</th>
+        </tr>
+        <tr>
+            <td>oil pastels</td>
+        </tr>
+        <tr>
+            <td>blending tools</td>
+        </tr>
+         <tr>
+            <td>canvas or paper</td>
+        </tr>
+         <tr>
+            <td>fixative spray</td>
+        </tr>
+         <tr>
+            <td>scrap paper</td>
+        </tr>
+      </table>
+    </div>
+    <div class="materials-cards" aria-label="Materials images">
+      <div class="materials-top-cards" aria-label="Top materials">
+        <div class="materials-top-card"><img src="https://files.catbox.moe/580p2i.webp" alt="Sketching"></div>
+        <div class="materials-top-card"><img src="https://files.catbox.moe/p2zmbw.jpg" alt="Pencils"></div>
+        <div class="materials-top-card"><img src="https://files.catbox.moe/3uvlyc.jpg" alt="Palette"></div>
+        <div class="materials-top-card"><img src="https://files.catbox.moe/0jkg7d.jpg" alt="Brushes"></div>
+        <div class="materials-top-card"><img src="https://files.catbox.moe/xytr24.png" alt="Textures"></div>
+      </div>
+      <div class="materials-row">
+      <div class="materials-card">
+        <img src="https://files.catbox.moe/gmltre.webp" alt="van gogh">
+        <p>Van Gogh</p>
+      </div>
+      <div class="materials-card">
+        <img src="https://files.catbox.moe/y6tyij.jpeg" alt="starry night">
+        <p>The Starry Night</p>
+      </div>
+      <div class="materials-card">
+        <img src="https://files.catbox.moe/t3uw6o.jpeg" alt="the scream">
+        <p>The Scream</p>
+      </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="text-box tips" style="max-width:720px;margin:24px auto;padding:18px;">
+    <h3>Who inspires me</h3>
+    <p>
+     Vincent van Gogh was a Dutch painter who used bright colors and strong brushstrokes which uses oil pastels in his art. He made many paintings, but he had a hard life and was not famous while he was alive. Some of his most well-known works are The Starry Night and Sunflowers. I like his paintings because they show a lot of feelings and energy. The colors are bold and make the pictures stand out. His art feels honest, and it shows how even simple things can be beautiful
+  </div>
+
+</body>
+</html>
